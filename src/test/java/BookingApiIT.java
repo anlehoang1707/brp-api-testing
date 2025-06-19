@@ -32,7 +32,7 @@ public class BookingApiIT {
         BookingDates dates = new BookingDates(LocalDate.of(2025, 12,12),LocalDate.of(2025,12,30));
         Booking payload = new Booking(2,"An Alex","Le Hoang",true,"automationfc@gmail.com","012345678910",dates,"Breakfast");
         Response response = BookingApi.postBooking(authToken,payload);
-        System.out.println(response.getBody().asString());
+//        System.out.println(response.getBody().asString());
         Assert.assertEquals(response.getStatusCode(),200);
     }
 
